@@ -1,40 +1,40 @@
 # 프로그래머스 코딩테스트 연습(힌트가 있을 뿐 답 없음)
 ------------------------------------------------------------------------------------------
-## - 이름이 없는 동물의 아이디(SQL)\
+## - 이름이 없는 동물의 아이디(SQL)
 select 문의 구조 이해, where 조건, order by 정렬
 
-## - 최댓값 구하기(SQL)\
+## - 최댓값 구하기(SQL)
 max 또는 
 
-## - 가장 비싼 상품 구하기(SQL)\
+## - 가장 비싼 상품 구하기(SQL)
 select 문의 구조 이해, 최대값 추출 명령어, 이름 변경 명령어 as
 
-## - 흉부외과 또는 일반외과 의사 목록 출력하기(SQL)\
+## - 흉부외과 또는 일반외과 의사 목록 출력하기(SQL)
 where 조건(특정 과만 출력), datetime을 date로 변형(구글 검색으로 방법조회)해서 사용(문제오류:테이블은 DATE 형식인데 동작은 DATETIME로 실행되서 통과가 안됨), order by 정렬
 
-## - 과일로 만든 아이스크림 고르기(SQL)\
+## - 과일로 만든 아이스크림 고르기(SQL)
 상반기 아이스크림 총주문량이 3,000보다 높으면서 아이스크림의 주 성분이 과일인(where문, and) 아이스크림의 맛을 총주문량이 큰 순서대로 조회하는(order by desc) SQL 문을 작성
 ->select문 and, where 조건, order by desc
 (SELECT FLAVOR from FIRST_HALF where TOTAL_ORDER > 3000 and FLAVOR in (select FLAVOR from ICECREAM_INFO where INGREDIENT_TYPE = 'fruit_based') order by TOTAL_ORDER desc;) - select in은 특정 '값' 추출, select from은 '테이블' 추출
 
-## - 조건에 맞는 도서와 저자 리스트 출력하기(SQL)\
+## - 조건에 맞는 도서와 저자 리스트 출력하기(SQL)
 date_format(dt,”%Y-%m-%d”)로 datetime을 date로 변형
 inner join문
 select b.BOOK_ID, a.AUTHOR_NAME, date_format(b.PUBLISHED_DATE, '%Y-%m-%d') as PUBLISHED_DATE from AUTHOR a inner join BOOK b ON a.author_id = b.author_id
 where b.CATEGORY = '경제' order by PUBLISHED_DATE;
 
-## - 성분으로 구분한 아이스크림 총 주문량(SQL)\
+## - 성분으로 구분한 아이스크림 총 주문량(SQL)
 group by, 
 - ------------------------------------------------------------------------------------------------------
 # 여기는 Python 문제
 
-## - 더 크게 합치기\
+## - 더 크게 합치기
 int, str, min, max
 
-## - 꼬리 문자열\
+## - 꼬리 문자열
 list 초기 값, append, list to string(.join)
 
-## - A 강조하기\
+## - A 강조하기
 쉽게는 lower, replace // .upper, .lower, and("A"가 아닌 모든 대문자 알파벳)
 
 ## - 개미 군단
